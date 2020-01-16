@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <conio.h>
+int main ()
+{
+ int numero, i, sumador = 0 ;
+
+ printf("\n escribe un numero \n") ;
+ scanf("%d", &numero) ;
+
+ for( i = 1; numero > i; i++)
+  {
+   if(numero % i == 0)
+     sumador = sumador + i;
+  }
+
+ if (sumador == numero)
+    printf("\n %d es un numero perfecto", numero) ;
+ else
+    printf("\n %d no es un numero perfecto", numero) ;
+
+return 0 ;
+}
+
+// % es lo que sobra de la division entera
+//al momento de imprimero &d para que te salga el numero :V
+//&i es decimales y con d enteros
