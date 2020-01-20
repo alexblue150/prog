@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<math.h>
+int main(){
+int a,n,m,i=0,sum=0;
+printf("escribe el numero \n");
+scanf("%d",&n);
+m=n;
+while(m>0){
+        m=m/10;
+        i++;
+}
+m=n;
+while(n>0){
+        a=n%10;
+        sum=sum+pow(a,i);
+        n=n/10;
+}
+if(sum==m)
+          printf("el numero es narcisista");
+else
+      printf("el numero es narcicista");
+return 0;
+}
+//reminders firts while te cuenta en teoria los digitos :V
+//en suma va sumando cada digito elevado al numero de numeros que hay
