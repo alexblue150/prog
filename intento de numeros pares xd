@@ -1,24 +1,18 @@
 #include <stdio.h>
 #include <conio.h>
 
-int main ()
-{
- int numero, m = 0, j = 0, h, sumadorent = 0 ;
+int main(){
 
- printf("\n escribe un numero \n") ;
- scanf("%d", &numero) ;
- while(numero != 0){
-{
+int a,n,sumadorent=0;
+printf("escribe el numero \n");
+scanf("%d",&n);
+while(n>0){
+        a=n%10;
+        n=n/10;
+        if (n = 2 || 4 || 6 || 8);
+        sumadorent++;
 
-    j=h%10;
-    m=h-j;
-    h=m;
-        if (m = 2 || 4 || 6 || 8);
-        sumadorent=sumadorent+1
 }
-
-printf("\n %d numeros de pares:", sumadorent) ;
-
-
-return 0 ;
+printf("numero de paresxaxaxaxax: %d", sumadorent);
+return 0;
 }
