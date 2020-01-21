@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <conio.h>
+
+int main(){
+	int r,s;
+	printf(" escribe el primer numero \n");
+	scanf ("%d", &r);
+	printf (" escribe el segundo numero \n");
+	scanf ("%d", &s);
+	
+	if (r==s){
+		printf(" los numeros son iguales \n");
+	}
+	else if (r<s){
+		printf(" %d el numero es mayor \n", s,"\n %d el numero es menor \n", r);
+	}else{
+		printf(" %d el numero es mayor \n", r,"\n %d el numero es menor \n", s);
+	}
+	return 0;
+}	
+
