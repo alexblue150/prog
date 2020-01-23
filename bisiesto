@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <conio.h>
+int main (){
+int n;
+printf("escribe el año \n");
+scanf("%d", &n);
+if(n % 100 == 0){
+    if(n % 400 == 0 ){
+        printf ("es bisiesto \n");
+    }
+
+    else{
+        printf(" no es bisiesto \n");}
+    }
+else{
+    if (n % 4 == 0){
+        printf(" es bisiesto \n");}
+    else{
+        printf("no es bisiesto \n");
+        }
+    }
+return 0 ;
+}
