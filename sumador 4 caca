@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <math.h>
+ float main (){
+ float termino=0, numerador=1, suma=0, n, x, i;
+ printf ("write your fricking number\n");
+ scanf ("%f", &x);
+ n=x;
+ for(i=1;i<=n;i++){
+    numerador=(numerador*x);
+    termino= numerador/i;
+    suma= suma+ termino;
+ }
+ printf ("%f", suma);
+ return 0;
+ }
+// literal hice copypaste del 3 xdddddddddddddddddddddddddddddddddddd
