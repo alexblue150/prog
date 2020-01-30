@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+
+float a, b, x, formula;
+a=4475.150637;
+b=3.394872523;
+printf ("escriba la temperatura \n");
+scanf("%f", &x);
+formula= a+b*x;
+printf ("%f", formula);
+}
+
+
+
