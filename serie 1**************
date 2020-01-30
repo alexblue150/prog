@@ -6,6 +6,7 @@ printf("altura de la figura \n");
 fflush(stdin);
 scanf("%i", &n);
 for(i=1;i<=n;i++){
-    for(m=1;m<=2*i-1;m++){
-        printf("*");}}
-        printf("\n");}
+    for(m=1;m<=n-i;m++){
+        printf("*");}
+        printf("\n");}}
+
