@@ -1,0 +1,19 @@
+#include<stdio.h>
+main()
+{
+
+int x,i,m;
+printf("escribe el tamaño de la figura \n");
+scanf("%i",&x);
+for(i=1;i<=x;i++){
+  if (i==1 || i==x){
+    for(m=1;m<=x;m++){
+    printf("+ ");}}
+  else{
+    printf("+");
+    for(m=1;m<=x-2;m++)
+      printf("  ");
+      printf(" +");}
+      printf("\n");}}
+
+//third for was trying numbers xdddd
