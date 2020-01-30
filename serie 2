@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main(){
+int m,n,i;
+printf("altura de la figura \n");
+fflush(stdin);
+scanf("%i", &n);
+for(i=1;i<=n;i++){
+    if(i%2!=0){
+    printf("#");}
+    else{
+    printf("+");}
+
+    for(m=1;m<=n;m++){
+      if(m%2!=0){
+    printf("#");}
+    else{
+    printf("+");}
+    }
+        printf("\n");
+ }
+
+}
+
+
+
+// segunda linea no imprime intercalado la en los 2 primeros, big F
