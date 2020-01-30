@@ -1,5 +1,5 @@
 #include <stdio.h>
-// npi de como hacerlo de cabeza xd
+// quedo del otro lado but it works xddd solo que la altura es un numero menos :v
 int main(){
 int m,n,i;
 printf("altura de la figura \n");
