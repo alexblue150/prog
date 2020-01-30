@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <math.h>
+int main (){
+	float termino=0, denominador=1, suma=0, n, x, i;
+	printf ("write your fricking number\n");
+	scanf ("%f", &x);
+	n=x;
+	for(i=1;i<=n;i++){
+		denominador=denominador*x*i;
+		termino= 1/i*denominador;
+		suma= suma+ termino;
+	}
+	printf ("%f", suma);
+	return 0;
+}
