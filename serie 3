@@ -3,7 +3,7 @@ main()
 {
 
 int x,i,m;
-printf("escribe el tamaño de la figura \n");
+printf("altura de la figura \n"); // n x n
 scanf("%i",&x);
 for(i=1;i<=x;i++){
   if (i==1 || i==x){
