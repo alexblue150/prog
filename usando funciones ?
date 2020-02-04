@@ -7,7 +7,7 @@ double formula (double x, int n);
 int main(){
 int n; //these two los declare segun afuera pero me dice que nunca los declare si no los  pongo dentro del main xdddddddd
 double x, // **maybe si le doy valor desde afuera sale la vaina, so, los numeros los escribiria antes de copilar**
-printf("escribe x: \n"); //npi de porque el error aquí xddddddddddddd (maybe no tengo el copilador but)
+printf("escribe x: \n"); //npi de porque el error aquí xddddddddddddd (maybe no tengo el librero but)
 scanf("%f", &x); // estoy usando factorialque en teoria esta en la biblioteca math.h wtf
 printf("escribe n: \n");
 scanf("%i", & n);
