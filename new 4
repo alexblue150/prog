@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <math.h>
+int main (){
+	int i;
+	float termino=0, numerador=1, suma=0, n, x;
+	printf ("valor de x \n");
+	scanf ("%f", &x);
+	printf ("valor de n \n");
+	scanf ("%f", &n);
+	for(i=1;i<=n;i++){
+		numerador=numerador*x*i;
+		termino= i*numerador;
+		if (i%2 == 0){
+		suma= suma+ termino;}
+		else {
+		suma=suma-termino;}
+
+	}
+	printf ("%f", suma);
+	return 0;}
