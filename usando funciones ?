@@ -10,6 +10,7 @@ int main(void){
 	scanf("%f", &x); // estoy usando factorialque en teoria esta en la biblioteca math.h wtf
 	printf("escribe n: \n");
 	scanf("%i", & n);
+	int factorial=formula(x,n)
 	
 }
 	
@@ -18,7 +19,7 @@ int main(void){
 		for (int i = 1; i <= n; i++){
 			sum=(pow (x, i)/factorial(i));
 		}
-		return 10; //linea 20 y 28 bot sure what happen si les pongo la linea  (prob solo en java funciona)
+		return sum; //linea 20 y 28 bot sure what happen si les pongo la linea  (prob solo en java funciona)
 		
 	}
 		
@@ -27,5 +28,5 @@ int main(void){
 			for (int i = 1;i<=x;i++){
 				y=i+1;
 			}
-			return ;
+			return y; ;
 		}
