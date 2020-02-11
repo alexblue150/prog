@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main()
+{
+	int x,n,i=0,r=0;
+	printf("escribe un numero \n");
+	scanf("%d",&n);
+	while(n>0){
+        x=(n%10);
+        n=(n/10);
+        if(x==1){
+            r++;
+                }
+        i++;
+                }
+    if(r==i){
+      printf("el numero es repunit");
+            }
+    else{
+      printf("el numero no es repunit");
+        }
+}
