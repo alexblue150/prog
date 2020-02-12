@@ -10,6 +10,8 @@ int main()
         if(x==1){
             r++;
                 }
+	else{
+		break;}
         i++;
                 }
     if(r==i){
