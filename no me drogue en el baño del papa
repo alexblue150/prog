@@ -16,7 +16,7 @@ for(i=0; i<9; i++){
             else{
                 numint= numint*(i-x+1)/x;}  
  
-            printf("%d", numint);
+            printf("%d ", numint);
         }
         printf("\n");
     }
