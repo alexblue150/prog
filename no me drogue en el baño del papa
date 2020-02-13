@@ -14,7 +14,7 @@ for(i=0; i<9; i++){
             if (x==0 || x==0){    
                 numint= 1;}
             else{
-                numint= numint*(i-j+1)/j;}  
+                numint= numint*(i-x+1)/x;}  
  
             printf("%d", numint);
         }
