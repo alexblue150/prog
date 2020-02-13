@@ -1,0 +1,23 @@
+//not sure about that
+// https://soymatematicas.com/triangulo-de-pascal/ aqui esta la formula de factorial
+//pero el dominio de funciones bien gracias :v
+#include <stdio.h>
+
+int main () {
+int numint, sep, i, x;
+ 
+for(i=0; i<9; i++){
+    for(sep=1; sep<=(9-i); sep++)  
+        printf("  ");
+ 
+        for(x=0; x<=i; x++){
+            if (x==0 || x==0){    
+                numint= 1;}
+            else{
+                numint= numint*(i-j+1)/j;}  
+ 
+            printf("%d", numint);
+        }
+        printf("\n");
+    }
+    }
