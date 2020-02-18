@@ -1,0 +1,25 @@
+#include <stdio.h>
+int suma (int *, int b);
+
+
+int main(int argc, char *argv[]) {
+int a,b,c;
+printf(" escribe el primer valor \n");
+scanf("%d", &a);
+printf(" escribe el segundo valor \n");
+scanf("%d", &b);
+c= suma(&a,b);
+printf ("\n");
+	printf("%d", &c);
+	printf ("\n");
+	printf("%d", &b);
+	printf ("\n");
+	printf("%d", &a);
+	return 0;
+}
+int suma(int *a, int b){
+int c;
+*a=*a+20;
+c=*a+b;
+return c;
+}
