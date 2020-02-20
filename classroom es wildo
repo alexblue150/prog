@@ -12,58 +12,62 @@ printf(" escribe el tercer valor \n");
 scanf("%d", &c);
 mayor(&a, &b, &c);
 printf ("\n");
-	printf(" el menor es %d", &a);
-	printf ("\n");
-	printf(" el medio es %d", &b);
-	printf ("\n");	
-	printf(" el numero mayor es %d", &c);
-	printf ("\n");
-	
+
 	return 0;
 }
-int mayor(int *a, int *b, int *c){
-	if (*a<*b){
-		if(*a<*c){
-			*a=*a;
-			if(*c<*b){
-				*b=*c;
-				*c=*b;
-			}
-			else{
-				*b=*b;
-				*c=*c;
-			}
-		}
-		else {
-			if(*c<*b){
-				*a=*c;
-				if (*a<*b){
-				*b=*a;
-				*c=*b;
-				}
-			}
-			else{
-				*b=*b;
-				*c=*a;
-			}
-		}
-	}
-	else (*c<*a){
-		if(*c<*b){
-			*a=*c;
-			if(*a<*b){
-				*b=*a;
-				*c=*b;
-					}
-			else{
-				*b=*b;
-				*c=*a;
-			}
-		}
-		
-	}
-
-return a;
-return b;
-return c;
+void mayor(int *a, int *b, int *c){
+int A,B,C;
+if (*a<*b){
+    if (*a<*c){
+        if (*b<*c){
+            A=*a;
+            B=*b;
+            C=*c;
+            printf(" el numero menor es %d", A);
+            printf ("\n");
+            printf(" el numero medio es %d", B);
+            printf ("\n");
+            printf(" el numero mayor es %d", C);
+            printf ("\n");
+                }
+        else {
+            A=*a;
+            B=*c;
+            C=*b;
+            printf(" el numero menor es %d", A);
+            printf ("\n");
+            printf(" el numero medio es %d", B);
+            printf ("\n");
+            printf(" el numero mayor es %d", C);
+            printf ("\n");
+            }
+                }
+            }
+ else{
+    if (*b<*c){
+        if (*a<*c){
+            A=*b;
+            B=*a;
+            C=*c;
+            printf(" el numero menor es %d", A);
+            printf ("\n");
+            printf(" el numero medio es %d", B);
+            printf ("\n");
+            printf(" el numero mayor es %d", C);
+            printf ("\n");
+            }
+        else {
+            A=*b;
+            B=*c;
+            C=*a;
+            printf(" el numero menor es %d", A);
+            printf ("\n");
+            printf(" el numero medio es %d", B);
+            printf ("\n");
+            printf(" el numero mayor es %d", C);
+            printf ("\n");
+            }
+        }
+    }
+    return ;
 }
