@@ -1,0 +1,25 @@
+#include <stdio.h>
+void factp (int n);
+
+
+int main(int argc, char *argv[]) {
+int n;
+printf(" escribe el valor del numero \n");
+scanf("%d", &n);
+
+factp (n);
+return 0;
+}
+void factp(int n){
+for(int i=2;i<=n;i++){
+    while(n!=1){
+        if (n%i==0){
+            printf("%d ",i);
+            n= n/i;
+                    }
+        else break;
+                }
+                    }
+  return;
+  }
+
