@@ -1,0 +1,67 @@
+#include <stdio.h>
+void enteros(int n);
+void perfectos(int n);
+int perfectos1 (int i);
+
+void inversos(int n)
+int main(int argc, char *argv[]) {
+	int opcion, n;
+	printf("introducir 10 numeros y determinar cuales son pares e impares");
+	printf(" Numeros perfectos");
+	printf("voltear los numeros");
+	scanf ("%d", &opcion);
+	do {
+		switch (n)
+		case 1:
+		enteros (n);
+		case 2:
+			
+		case 3:
+			inversos (n);
+		default: 
+			return 0;
+	
+	while ( )}
+}
+//1
+void enteros (int n){
+float a;
+for (int i;i<=10;i++){
+	printf("numero %d: ", i);
+	scanf ("%d", &a);
+	if(a%2==0){
+		printf("El numero es par"):
+	}
+	else {
+		printf("el numero es impar")
+	}
+	
+}
+return ;
+}
+//2 dentro de la funcion llamas a otra que determine los perfectos
+void perfectos (int n){
+	int sumador=0, i;
+for (i=1;i<=10;i++){
+	printf("numero %d: ", i);
+	printf("%d", perfectos1(i))
+		
+		}	
+	return ;
+}
+int perfectos1(int i){
+	int h=1;
+	do
+		if (i%)
+		
+}
+//3
+void inversos (n){
+	long int a,m,b;
+	printf("ingresa el numero: ")
+	scanf ("%d", &a);
+	for(int i=1;i<=a;i++){
+		m=a%10;
+		a=a/10;
+		printf ("%d", m);
+}
