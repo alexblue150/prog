@@ -1,0 +1,46 @@
+#include <stdio.h>
+ int main(){
+ int c1,f1,x,y,res,i,esc;
+ printf("\nFilas de la primera matriz: ");
+ scanf("%d",&f1);
+ printf("\nColumnas de la primera matriz: ");
+ scanf("%d",&c1);
+ printf("\nIngresa el valor del escalar: ");
+ scanf("%d",&esc);
+
+ int mtz1[f1][c1], mtz3[50][50];
+    printf("\nPrimer matriz");
+     for(x=0;x<f1;x++)
+      for (y=0;y<c1;y++){
+
+       printf("\nIngrese la posicion [%d][%d]:",x,y);
+       scanf("%d",&mtz1[x][y]);
+      }
+
+//impresion de matriz
+     printf("Primer matriz");
+       for(x=0;x<f1;x++)
+      {
+       printf("\n");
+       for(y=0;y<c1;y++)
+       printf("%d ",mtz1[x][y]);
+      }
+     printf("\nEscalar : %d \n", esc);
+
+ //MULTIPLICACION
+  for(x=0;x<f1;x++){
+  for(y=0;y<c1;y++)
+  {
+    mtz3[x][y]=mtz1[x][y]*esc;
+  }}
+//impresion
+  printf("resultado de la suma \n");
+  for(x=0;x<f1;x++){
+    printf ("\n");
+    for(y=0;y<c1;y++)
+      {
+        printf("%d ",mtz3[x][y]);
+      }
+      }
+     return 0;
+     }
