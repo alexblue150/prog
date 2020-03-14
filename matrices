@@ -1,15 +1,15 @@
 #include <stdio.h>
+
 void sumamtz(int a);
 void multmtz(int a);
 void multesc(int a);
-int main()
- {
+
+int main(){
  for (;;){
     int n;
     printf (" Escribe 1 si quieres realizar suma de matrices \n Escribe 2 si quieres hacer multiplicacion de matriz por matriz \n Escribe 3 si quieres multiplicar matriz por escalar \n");
     scanf ("%d",&n);
-    switch (n)
-    {
+    switch (n){
         case 1:
         sumamtz(n);
         break;
@@ -20,183 +20,165 @@ int main()
 
         case 3:
         multesc(n);
-        break;
-
-        default:
-        break;
+								break;
     }
-        }
     return 0;
  }
 
  void sumamtz(int a){
-     int c1,f1,c2,f2,x,y;
- printf("\nFilas de la primera matriz: ");
- scanf("%d",&f1);
- printf("\nColumnas de la primera matriz: ");
- scanf("%d",&c1);
- printf("\nFilas de la segunda matriz: ");
- scanf("%d",&f2);
- printf("\nColumnas de la segunda matriz: ");
- scanf("%d",&c2);
- int mtz1[f1][c1], mtz2[f2][c2], mtz3[50][50];
- if (f1==f2 || c2==c1){
-    printf("\nPrimer matriz");
-     for(x=0;x<f1;x++)
-      for (y=0;y<c1;y++){
-
-       printf("\nIngrese la posicion [%d][%d]:",x,y);
-       scanf("%d",&mtz1[x][y]);
-      }
-
-     printf("\nSegunda matriz");
-     for(x=0;x<f2;x++)
-      for (y=0;y<c2;y++){
-       printf("\nIngrese la posicion [%d][%d]:",x,y);
-       scanf("%d",&mtz2[x][y]);
-      }
-
-//impresion de matrices
-     printf("Primer matriz");
-       for(x=0;x<f1;x++)
-      {
-       printf("\n");
-       for(y=0;y<c1;y++)
-       printf("%d ",mtz1[x][y]);
-      }
-     printf("\nSegunda matriz");
-       for(x=0;x<f2;x++)
-      {
-       printf("\n");
-       for(y=0;y<c2;y++)
-       printf("%d ",mtz2[x][y]);
-      }
-//La sumacion
- for(x=0;x<f1;x++){
-  for(y=0;y<c2;y++)
-  {
-    mtz3[x][y]=mtz1[x][y]+mtz2[x][y];
-  }}
-//impresion
-  printf("resultado de la suma");
-  for(x=0;x<f1;x++){
-        printf("\n");
-    for(y=0;y<c2;y++)
-      {
-        printf("%d",mtz3[x][y]);
-      }}
-                            }
-     else
+    int c1,f1,c2,f2,x,y;
+    printf("\nFilas de la primera matriz: ");
+    scanf("%d",&f1);
+    printf("\nColumnas de la primera matriz: ");
+    scanf("%d",&c1);
+    printf("\nFilas de la segunda matriz: ");
+    scanf("%d",&f2);
+    printf("\nColumnas de la segunda matriz: ");
+    scanf("%d",&c2);
+    int mtz1[f1][c1], mtz2[f2][c2], mtz3[50][50];
+    if (f1==f2 || c2==c1){
+	    printf("\nPrimer matriz");
+	    for(x=0;x<f1;x++){
+		    for (y=0;y<c1;y++){
+			    printf("\nIngrese la posicion [%d][%d]:",x,y);
+			    scanf("%d",&mtz1[x][y]);
+			}
+		}
+	    printf("\nSegunda matriz");
+	    for(x=0;x<f2;x++){
+		    for (y=0;y<c2;y++){
+			    printf("\nIngrese la posicion [%d][%d]:",x,y);
+			    scanf("%d",&mtz2[x][y]);
+		    }
+		}
+	    printf("Primer matriz"); // aqui empieza la impresion de matrices
+	    for(x=0;x<f1;x++){
+	    	printf("\n");
+	    	for(y=0;y<c1;y++){
+	    		printf("%d ",mtz1[x][y]);
+	    	}
+	    }
+	    printf("\nSegunda matriz");
+	    for(x=0;x<f2;x++){
+	       printf("\n");
+	       for(y=0;y<c2;y++){
+	    		printf("%d ",mtz2[x][y]);
+	    	}
+	    }  
+		for(x=0;x<f1;x++){		//aqui empieza La sumacion
+			for(y=0;y<c2;y++){
+			    mtz3[x][y]=mtz1[x][y]+mtz2[x][y];
+		  	}
+		}
+		printf("resultado de la suma"); //aqui empieza la impresion
+		 for(x=0;x<f1;x++){
+	        printf("\n");
+	    	for(y=0;y<c2;y++){
+		        printf("%d",mtz3[x][y]);
+	    	}
+		}
+    }else{
         printf("la matrices no son iguales");
+    }
      return ;
  }
 
 void multmtz(int a){
-     int c1,f1,c2,f2,x,y,res,i;
- printf("\nFilas de la primera matriz: ");
- scanf("%d",&f1);
- printf("\nColumnas de la primera matriz: ");
- scanf("%d",&c1);
- printf("\nFilas de la segunda matriz: ");
- scanf("%d",&f2);
- printf("\nColumnas de la segunda matriz: ");
- scanf("%d",&c2);
- int mtz1[f1][c1], mtz2[f2][c2], mtz3[50][50];
- if (f1==c2){
-    printf("\nPrimer matriz");
-     for(x=0;x<f1;x++)
-      for (y=0;y<c1;y++){
-
-       printf("\nIngrese la posicion [%d][%d]:",x,y);
-       scanf("%d",&mtz1[x][y]);
-      }
-
-     printf("\nSegunda matriz");
-     for(x=0;x<f2;x++)
-      for (y=0;y<c2;y++){
-       printf("\nIngrese la posicion [%d][%d]:",x,y);
-       scanf("%d",&mtz2[x][y]);
-      }
-
-//impresion de matrices
-     printf("Primer matriz");
-       for(x=0;x<f1;x++)
-      {
-       printf("\n");
-       for(y=0;y<c1;y++)
-       printf("%d ",mtz1[x][y]);
-      }
-     printf("\nSegunda matriz");
-       for(x=0;x<f2;x++)
-      {
-       printf("\n");
-       for(y=0;y<c2;y++)
-       printf("%d ",mtz2[x][y]);
-      }
- //MULTIPLICACION
- for(x=0;x<f1;x++)
-  for(y=0;y<c2;y++)
-  {
-   for(res=0,i=0;i<c1;i++)
-    res=res+mtz1[x][i]*mtz2[i][y];
-
-   mtz3[x][y]=res;
-  }
-//impresion de matriz
- printf("\nResultado de multiplicación");
-  for(x=0;x<f1;x++)
-  {
-   printf("\n");
-   for(y=0;y<c2;y++)
-   printf("%d ",mtz3[x][y]);
-  }                  }
-     else
+    int c1,f1,c2,f2,x,y,res,i;
+ 	printf("\nFilas de la primera matriz: ");
+ 	scanf("%d",&f1);
+ 	printf("\nColumnas de la primera matriz: ");
+ 	scanf("%d",&c1);
+ 	printf("\nFilas de la segunda matriz: ");
+ 	scanf("%d",&f2);
+ 	printf("\nColumnas de la segunda matriz: ");
+ 	scanf("%d",&c2);
+ 	int mtz1[f1][c1], mtz2[f2][c2], mtz3[50][50];
+ 	if (f1==c2){
+		printf("\nPrimer matriz");
+		for(x=0;x<f1;x++){
+    		for (y=0;y<c1;y++){
+    			printf("\nIngrese la posicion [%d][%d]:",x,y);
+				scanf("%d",&mtz1[x][y]);
+			}
+ 		}
+		printf("\nSegunda matriz");
+		for(x=0;x<f2;x++){
+			for (y=0;y<c2;y++){
+				printf("\nIngrese la posicion [%d][%d]:",x,y);
+				scanf("%d",&mtz2[x][y]);
+			}
+    	}
+    	printf("Primer matriz"); //aqui empieza la impresion de matrices
+    	for(x=0;x<f1;x++){
+    		printf("\n");
+			for(y=0;y<c1;y++){
+				printf("%d ",mtz1[x][y]);
+			}
+		}
+		printf("\nSegunda matriz");
+		for(x=0;x<f2;x++){
+    		printf("\n");
+    		for(y=0;y<c2;y++){
+    			printf("%d ",mtz2[x][y]);
+      		}
+		}
+		for(x=0;x<f1;x++){  //aqui empieza la MULTIPLICACION
+  			for(y=0;y<c2;y++){
+				for(res=0,i=0;i<c1;i++){
+				    res=res+mtz1[x][i]*mtz2[i][y];
+				}
+				mtz3[x][y]=res;
+			}
+		}
+		printf("\nResultado de multiplicación"); //impresion de matriz
+		for(x=0;x<f1;x++){
+			printf("\n");
+			for(y=0;y<c2;y++){
+				printf("%d ",mtz3[x][y]);
+			}
+  		}
+	}else{
         printf("tas meco");
-     return ;
+    }
+    return ;
 }
 
 void multesc(int a){
-int c1,f1,x,y,res,i,esc;
- printf("\nFilas de la primera matriz: ");
- scanf("%d",&f1);
- printf("\nColumnas de la primera matriz: ");
- scanf("%d",&c1);
- printf("\nIngresa el valor del escalar: ");
- scanf("%d",&esc);
-
- int mtz1[f1][c1], mtz3[50][50];
+	int c1,f1,x,y,res,i,esc;
+	printf("\nFilas de la primera matriz: ");
+	scanf("%d",&f1);
+	printf("\nColumnas de la primera matriz: ");
+	scanf("%d",&c1);
+	printf("\nIngresa el valor del escalar: ");
+	scanf("%d",&esc);
+	int mtz1[f1][c1], mtz3[50][50];
     printf("\nPrimer matriz");
-     for(x=0;x<f1;x++)
-      for (y=0;y<c1;y++){
-
-       printf("\nIngrese la posicion [%d][%d]:",x,y);
-       scanf("%d",&mtz1[x][y]);
-      }
-
-//impresion de matriz
-     printf("Primer matriz");
-       for(x=0;x<f1;x++)
-      {
-       printf("\n");
-       for(y=0;y<c1;y++)
-       printf("%d ",mtz1[x][y]);
-      }
-     printf("\nEscalar : %d \n", esc);
-
- //MULTIPLICACION
-  for(x=0;x<f1;x++){
-    for(y=0;y<c1;y++)
-    {
-        mtz3[x][y]=mtz1[x][y]*esc;
-    }}
-//impresion
-  printf("resultado de la suma \n");
-  for(x=0;x<f1;x++){
-    printf ("\n");
-    for(y=0;y<c1;y++)
-      {
-        printf("%d ",mtz3[x][y]);
-      }
-      }
-     return ;
+    for(x=0;x<f1;x++){
+    	for (y=0;y<c1;y++){
+    		printf("\nIngrese la posicion [%d][%d]:",x,y);
+    		scanf("%d",&mtz1[x][y]);
+    	}
+    }
+    printf("Primer matriz"); //aqui empieza la impresion de matriz
+    for(x=0;x<f1;x++){
+    	printf("\n");
+    	for(y=0;y<c1;y++){
+    		printf("%d ",mtz1[x][y]);
+    	}
+    }
+    printf("\nEscalar : %d \n", esc);
+	for(x=0;x<f1;x++){ 	//aqui empieza la MULTIPLICACION
+		for(y=0;y<c1;y++){
+    	    mtz3[x][y]=mtz1[x][y]*esc;
+    	}
+	}
+	printf("resultado de la suma \n"); //aqui empieza la impresion
+	for(x=0;x<f1;x++){
+    	printf ("\n");
+    	for(y=0;y<c1;y++){
+    	    printf("%d ",mtz3[x][y]);
+    	}
+    }
+    return ;
 }
